@@ -208,7 +208,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         exit={{ opacity: 0, y: 40, scale: 0.98 }}
         transition={{ duration: 0.3 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative max-w-6xl mx-3 sm:mx-auto my-4 sm:my-10 glass rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant"
+        className="relative max-w-6xl mx-2 xs:mx-4 sm:mx-auto my-4 sm:my-10 glass rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant"
       >
         <button
           onClick={onClose}
@@ -219,10 +219,10 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         </button>
 
         {/* Hero image gallery */}
-        <div className={`grid ${images.length > 1 ? "md:grid-cols-2" : "grid-cols-1"} gap-1 bg-gradient-to-br from-primary/30 to-accent/30`}>
+        <div className={`grid ${images.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"} gap-1 bg-gradient-to-br from-primary/30 to-accent/30`}>
           {images.map((img, i) => (
-            <div key={i} className="relative aspect-[16/10] overflow-hidden">
-              <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-full object-contain" />
+            <div key={i} className="relative aspect-video sm:aspect-[16/10] overflow-hidden">
+              <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-full object-contain sm:object-cover" />
             </div>
           ))}
         </div>
@@ -240,19 +240,23 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           <p className="text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-3xl leading-relaxed">{project.caseStudy.overview}</p>
 
           {/* Meta row */}
-          <div className="grid sm:grid-cols-2 gap-4 mb-10">
-            <div className="glass rounded-2xl p-5 flex items-center gap-4">
-              <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center"><Briefcase className="w-5 h-5" /></div>
-              <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">Role</div>
-                <div className="font-semibold">{project.caseStudy.role}</div>
+          <div className="grid xs:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <div className="glass rounded-xl sm:rounded-2xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-brand flex items-center justify-center shrink-0">
+                <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">Role</div>
+                <div className="text-xs sm:text-base font-semibold truncate">{project.caseStudy.role}</div>
               </div>
             </div>
-            <div className="glass rounded-2xl p-5 flex items-center gap-4">
-              <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center"><Clock className="w-5 h-5" /></div>
-              <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">Timeline</div>
-                <div className="font-semibold">{project.caseStudy.timeline}</div>
+            <div className="glass rounded-xl sm:rounded-2xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-brand flex items-center justify-center shrink-0">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">Timeline</div>
+                <div className="text-xs sm:text-base font-semibold truncate">{project.caseStudy.timeline}</div>
               </div>
             </div>
           </div>

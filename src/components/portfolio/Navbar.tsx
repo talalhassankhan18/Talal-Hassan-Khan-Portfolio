@@ -21,9 +21,9 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-4 sm:py-5"}`}>
-      <div className="container-px mx-auto max-w-[1600px]">
-        <nav className={`flex items-center justify-between rounded-full px-4 sm:px-6 py-2 sm:py-3 transition-all ${scrolled || open ? "glass shadow-card" : ""}`}>
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-3 sm:py-5"}`}>
+      <div className="px-4 xs:px-6 mx-auto max-w-[1600px]">
+        <nav className={`flex items-center justify-between rounded-full px-4 sm:px-6 py-1.5 sm:py-3 transition-all ${scrolled || open ? "glass shadow-card" : ""}`}>
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-brand flex items-center justify-center font-bold text-primary-foreground text-sm sm:text-base">T</div>
             <span className="font-display font-bold text-base sm:text-lg">Talal<span className="text-gradient">.</span></span>

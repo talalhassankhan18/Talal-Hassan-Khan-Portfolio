@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-20 overflow-hidden flex flex-col justify-center"
+      className="relative min-h-[auto] lg:min-h-screen pt-20 xs:pt-24 sm:pt-28 pb-12 sm:pb-20 overflow-hidden flex flex-col justify-center"
     >
       {/* Animated background blobs */}
       <div className="absolute inset-0 -z-10 grid-bg opacity-30" />
@@ -30,28 +30,28 @@ export function Hero() {
             <span className="text-muted-foreground font-medium">Available for premium design projects</span>
           </div>
 
-          <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight">
+          <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] sm:leading-[0.95] tracking-tight text-center lg:text-left">
             Crafting 
             <span className="block text-gradient mt-1 sm:mt-2">Digital Excellence</span>
             for SaaS & Brands.
           </h1>
 
-          <p className="text-sm xs:text-base sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
+          <p className="text-sm xs:text-base sm:text-xl text-muted-foreground max-w-xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
             I'm <span className="text-foreground font-bold underline decoration-accent/30 underline-offset-4">Talal Hassan Khan</span> — 
-            a Senior UI/UX Designer dedicated to building high-converting, premium digital products that scale effortlessly.
+            a Senior UI/UX Designer dedicated to building high-converting, premium digital products.
           </p>
 
-          <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-6">
+          <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-6 justify-center lg:justify-start">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 sm:gap-3 bg-gradient-brand text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full text-sm sm:text-lg font-bold glow-purple transition-all hover:scale-105 hover:shadow-2xl active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 sm:gap-3 bg-gradient-brand text-primary-foreground px-6 sm:px-10 py-3 sm:py-5 rounded-full text-sm sm:text-lg font-bold glow-purple transition-all hover:scale-105 hover:shadow-2xl active:scale-95"
             >
               Start a Project
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#work"
-              className="inline-flex items-center justify-center gap-2 glass px-6 sm:px-10 py-3.5 sm:py-5 rounded-full text-sm sm:text-lg font-bold hover:bg-white/10 transition-all border-white/5 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 glass px-6 sm:px-10 py-3 sm:py-5 rounded-full text-sm sm:text-lg font-bold hover:bg-white/10 transition-all border-white/5 active:scale-95"
             >
               View Portfolio
             </a>
@@ -81,7 +81,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-brand rounded-full blur-[80px] sm:blur-[120px] opacity-15 sm:opacity-20 animate-pulse" />
 
           {/* Image + cards wrapper — overflow hidden on mobile to prevent horizontal scroll */}
-          <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[420px] lg:max-w-[500px] mx-auto overflow-visible z-10">
+          <div className="relative w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[420px] lg:max-w-[500px] mx-auto overflow-visible z-10">
             
             {/* Image container */}
             <div className="relative aspect-[4/5] z-10 group">
@@ -98,14 +98,14 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                 
                 {/* Bottom Info Card */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 glass rounded-2xl sm:rounded-3xl p-3 sm:p-5 border-white/10 backdrop-blur-2xl shadow-2xl translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-8 sm:left-8 sm:right-8 glass rounded-xl sm:rounded-3xl p-2.5 sm:p-5 border-white/10 backdrop-blur-2xl shadow-2xl translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-sm sm:text-lg font-black tracking-tight">Talal Hassan Khan</div>
-                      <div className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-0.5">Senior Designer</div>
+                    <div className="min-w-0">
+                      <div className="text-xs sm:text-lg font-black tracking-tight truncate">Talal Hassan Khan</div>
+                      <div className="text-[8px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-0.5">Senior Designer</div>
                     </div>
-                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-brand flex items-center justify-center shadow-lg">
-                      <CheckCircle2 className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+                    <div className="w-7 h-7 sm:w-12 sm:h-12 rounded-lg sm:rounded-2xl bg-gradient-brand flex items-center justify-center shadow-lg shrink-0">
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-6 sm:h-6 text-white" />
                     </div>
                   </div>
                 </div>
@@ -114,9 +114,9 @@ export function Hero() {
 
             {/* Floating review card - top left */}
             <motion.div
-              animate={{ y: [0, -15, 0], rotate: [-2, 2, -2] }}
+              animate={{ y: [0, -10, 0], rotate: [-2, 1, -2] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-0 xs:-left-4 sm:-left-16 top-4 xs:top-8 sm:top-16 glass rounded-xl sm:rounded-2xl p-2 xs:p-2.5 sm:p-5 w-[120px] xs:w-[140px] sm:w-56 shadow-2xl z-20 border-white/10 backdrop-blur-3xl"
+              className="absolute -left-2 xs:-left-4 sm:-left-16 top-4 xs:top-8 sm:top-16 glass rounded-lg xs:rounded-xl sm:rounded-2xl p-2 sm:p-5 w-[100px] xs:w-[130px] sm:w-56 shadow-2xl z-20 border-white/10 backdrop-blur-3xl"
             >
               <div className="flex items-center gap-0.5 sm:gap-1 mb-1 sm:mb-2">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -134,9 +134,9 @@ export function Hero() {
 
             {/* Floating testimonial - bottom right */}
             <motion.div
-              animate={{ y: [0, 15, 0], rotate: [2, -2, 2] }}
+              animate={{ y: [0, 10, 0], rotate: [1, -1, 1] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute right-0 xs:-right-4 sm:-right-16 bottom-16 xs:bottom-20 sm:bottom-24 glass rounded-xl sm:rounded-2xl p-2 xs:p-2.5 sm:p-5 w-[130px] xs:w-[150px] sm:w-60 shadow-2xl z-20 border-white/10 backdrop-blur-3xl"
+              className="absolute -right-2 xs:-right-4 sm:-right-16 bottom-16 xs:bottom-20 sm:bottom-24 glass rounded-lg xs:rounded-xl sm:rounded-2xl p-2 sm:p-5 w-[110px] xs:w-[140px] sm:w-60 shadow-2xl z-20 border-white/10 backdrop-blur-3xl"
             >
               <div className="flex items-center gap-1 sm:gap-3 mb-1 sm:mb-4">
                 <div className="w-5 h-5 xs:w-6 xs:h-6 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-[6px] xs:text-[7px] sm:text-sm font-black shadow-inner shrink-0">
@@ -156,12 +156,12 @@ export function Hero() {
       </div>
 
       {/* Tools Marquee */}
-      <div className="mt-12 sm:mt-24 border-y border-white/5 bg-white/[0.02] py-4 sm:py-8 overflow-hidden relative">
+      <div className="mt-10 sm:mt-24 border-y border-white/5 bg-white/[0.02] py-4 sm:py-8 overflow-hidden relative">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...tools, ...tools, ...tools].map((tool, i) => (
-            <div key={i} className="flex items-center gap-2 sm:gap-3 mx-5 sm:mx-12 group cursor-default">
+            <div key={i} className="flex items-center gap-2 sm:gap-4 mx-4 xs:mx-6 sm:mx-12 group cursor-default">
               <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-accent group-hover:scale-150 transition-transform" />
-              <span className="text-sm sm:text-2xl font-display font-black text-muted-foreground/40 group-hover:text-white transition-colors">
+              <span className="text-[11px] xs:text-sm sm:text-2xl font-display font-black text-muted-foreground/40 group-hover:text-white transition-colors uppercase tracking-wider">
                 {tool}
               </span>
             </div>
