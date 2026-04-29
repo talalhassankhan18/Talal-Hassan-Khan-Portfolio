@@ -6,7 +6,7 @@ import { Work } from "@/components/portfolio/Work";
 import { Testimonials } from "@/components/portfolio/Testimonials";
 import { Contact, Footer } from "@/components/portfolio/Contact";
 
-export const Route = createFileRoute()({
+export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Talal Hassan Khan — UI/UX & SaaS Product Designer" },
